@@ -670,7 +670,7 @@ $c=array(
 	)
 );
 $data=array();$html=array();$tip=array();
-$mtfq_ar=explode('mtfq=',@$_SERVER['QUERY_STRING']);
+$mtfq_ar=explode('mtfq=',null !== @$_SERVER[REDIRECT_QUERY_STRING] ? @$_SERVER[REDIRECT_QUERY_STRING] : @$_SERVER['QUERY_STRING']);
 $mtfq_ar=explode('?',end($mtfq_ar));
 $_q=reset($mtfq_ar);
 $t=array_keys($c['z']);
@@ -759,7 +759,7 @@ if($_q){
 	if(@$data){
 		if($update){
 			array_multisort(array_column($data, 'n'),SORT_NUMERIC, SORT_DESC, $data);
-			file_put_contents($h,'<?php $data='.var_export($data,TRUE).'?>');
+			@file_put_contents($h,'<?php $data='.var_export($data,TRUE).'?>');
 		}
 		$t=count($data);
 		
@@ -832,8 +832,8 @@ if($html){
 	$Mustache=new Mustache_Engine();
 	echo $Mustache->render(file_get_contents('tpl/c.tpl'), $html);
 }else{
-	header('HTTP/1.1 404 Not Found');
-	header("status: 404 Not Found");
+	//header('HTTP/1.1 404 Not Found');
+	//header("status: 404 Not Found");
 }
 
 
