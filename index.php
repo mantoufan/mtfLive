@@ -670,8 +670,9 @@ $c=array(
 	)
 );
 $data=array();$html=array();$tip=array();
-$mtfq_ar= explode('mtfq=',@$_SERVER['QUERY_STRING']);
-$_q=reset(explode('?',end($mtfq_ar)));
+$mtfq_ar=explode('mtfq=',@$_SERVER['QUERY_STRING']);
+$mtfq_ar=explode('?',end($mtfq_ar));
+$_q=reset($mtfq_ar);
 $t=array_keys($c['z']);
 $n=$c['n'];
 
