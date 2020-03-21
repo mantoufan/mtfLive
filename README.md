@@ -8,11 +8,11 @@
 # 需求环境
 PHP 5.4+ 以上，推荐 PHP 7.0 +
 # 安装
-1. 下载源码：
+1. 下载源码：  
 ![Download ZIP](https://files.catbox.moe/xqy6zf.jpg)  
 或者：
 ```
-git clone https://github.com/mhjlw/mtfLive.git
+git clone https://github.com/mantoufan/mtfLive.git
 ```
 2 上传到根目录，绑定域名即可
 # 配置
