@@ -6,7 +6,7 @@
 - 自定义抓取规则，同时支持HTML和JSON
 - 自带全网直播网站多个热门分类和游戏的抓取规则
 # 需求环境
-PHP 5.4+ 以上，推荐 PHP 7.0 +
+PHP 7.0 +
 # 安装
 1. 下载源码：  
 ![Download ZIP](https://files.catbox.moe/xqy6zf.jpg)  
