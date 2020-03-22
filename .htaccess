@@ -1,2 +1,3 @@
 RewriteEngine On
+RewriteRule \.(js|css|svg|gif|png|jpg|jpeg|swf|ico|html|txt)$ - [L]
 RewriteRule ^(.*)$ index.php?mtfq=$1

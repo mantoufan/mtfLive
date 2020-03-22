@@ -650,6 +650,33 @@ $c=array(
 				'a'=>['.live_user_avatar','data-imgsrc']
 			]
 		),
+		'bilibili'=>array(
+			'd'=>'https://live.bilibili.com',
+			'z'=>'https://live.bilibili.com/p/eden/area-tags?',
+			'c'=>array(
+				'biaoyan'=>'parentAreaId=1&areaId=207'
+			),
+			'g'=>'.list li',
+			'r'=>[
+				't'=>['.room-title','text'],
+				'h'=>['a','href','',function($n){
+					return 'https://live.bilibili.com'.$n;
+				}],
+				'i'=>['.cover-ctnr','style','',function($backgroundImage){
+					return '/static/image/default.png';
+					// return preg_replace('/.*?url\((.*?)\);/','$1',$backgroundImage);
+				}],
+				'p'=>['.room-anchor span','text'],
+				'n'=>['.popular-ctnr span','text','',function($n){
+					return w2n($n);
+				}],
+				'nw'=>['.popular-ctnr span','text'],
+				'a'=>['.avatar','style','',function($backgroundImage){
+					return '/static/image/default.png';
+					// return preg_replace('/.*?url\((.*?)\);/','$1',$backgroundImage);
+				}]
+			]
+		),
 		'bupt'=>array(
 			'd'=>'http://ivi.bupt.edu.cn',
 			'z'=>'http://ivi.bupt.edu.cn',
