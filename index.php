@@ -1,6 +1,6 @@
 <?php 
 $c=array(
-	'n'=>'聚网直播',
+	'n'=>'直播 - Y站',
 	'c'=>array(
 		'blzy'=>array('n'=>'堡垒之夜'),
 		'biaoyan'=>array('n'=>'表演'),
