@@ -565,91 +565,91 @@ $c=array(
 				return $a;
 			}
 		),
-		'zhangyu'=>array(
-			'd'=>'http://www.zhangyu.tv',
-			'z'=>'http://www.zhangyu.tv/channeltypes/',
-			'c'=>array(
-				'huwai'=>'outdoors',
-				'lanqiu'=>'basketball',
-				'taiqiu'=>'billiards',
-				'zuqiu'=>'football'
-			),
-			'g'=>'.live-channel-panel li',
-			'r'=>[
-				't'=>['.channel-title','text'],
-				'h'=>['a','href','',function($n){
-					return 'http://www.zhangyu.tv'.$n;
-				}],
-				'i'=>['.ch-pic img','data-zimg'],
-				'p'=>['.channel-name','text'],
-				'n'=>['.channel-online','text','',function($n){
-					return w2n($n);
-				}],
-				'nw'=>['.channel-online','text','',function($n){
-					return n2w($n);
-				}],
-				'a'=>['.figurl','data-zimg']
-			]
-		),
-		'chushou'=>array(
-			'd'=>'https://www.chushou.tv',
-			'z'=>'https://www.chushou.tv/nav-list.htm?targetKey=',
-			'c'=>array(
-				'blzy'=>'3-1545-3',
-				'cf'=>'3-1147-3',
-				'cq'=>'3-1040-3',
-				'czymf'=>'3-1432-3',
-				'doudizhu'=>'3-1022-3',
-				'dnf'=>'3-1267-3',
-				'dwrg'=>'3-1606-3',
-				'ecy'=>'3-1353-3',
-				'fifa'=>'3-1189-3,3-1613-3,3-1614-3',
-				'hpjy'=>'3-1576-4',
-				'hyrz'=>'3-1175-3,3-1166-3',
-				'hyxd'=>'3-1541-3',
-				'jdqs'=>'3-1515-3',
-				'jielan'=>'3-1333-3',
-				'jw3'=>'3-1617-3',
-				'lol'=>'3-1435-3',
-				'lrs'=>'3-1386-3,3-1466-3,3-1387-3',
-				'lscs'=>'3-1003-3',
-				'majiang'=>'3-1035-3',
-				'mhls'=>'3-1603-4',
-				'miniworld'=>'3-1269-3',
-				'nba2k'=>'3-1190-3',
-				'nk'=>'3-1439-3',
-				'nsh'=>'3-1635-3',
-				'ppkdc'=>'3-1098-4',
-				'qmqz'=>'3-1009-3',
-				'qqfc-sy'=>'3-1409-3',
-				'qiuqiu'=>'3-1013-3',
-				'qqxw'=>'3-1601-3',
-				'swxf'=>'3-1436-3',
-				'tksj'=>'3-1204-3',
-				'ttkp'=>'3-1008-3,3-1186-3',
-				'tymyd'=>'3-1651-3',
-				'wd'=>'3-1173-3',
-				'wdsj'=>'3-1014-3',
-				'wzry'=>'3-1159-3',
-				'yhzrkdb'=>'3-1355-3',
-				'yqlfc'=>'3-1363-3',
-				'yanzhi'=>'3-1609-3'
-			),
-			'g'=>'#liveContent a',
-			'r'=>[
-				't'=>['.videoName','text'],
-				'h'=>['','href','',function($n){
-					return 'http://www.chushou.tv'.$n;
-				}],
-				'i'=>['.liveImages','data-imgsrc'],
-				'p'=>['.livePlayerName','text'],
-				'n'=>['.liveCount','text','',function($n){
-					return w2n($n);
-				}],
-				'nw'=>['.liveCount','text'],
-				'a'=>['.live_user_avatar','data-imgsrc']
-			]
-		),
+		// 'zhangyu'=>array(
+		// 	'd'=>'http://www.zhangyu.tv',
+		// 	'z'=>'http://www.zhangyu.tv/channeltypes/',
+		// 	'c'=>array(
+		// 		'huwai'=>'outdoors',
+		// 		'lanqiu'=>'basketball',
+		// 		'taiqiu'=>'billiards',
+		// 		'zuqiu'=>'football'
+		// 	),
+		// 	'g'=>'.live-channel-panel li',
+		// 	'r'=>[
+		// 		't'=>['.channel-title','text'],
+		// 		'h'=>['a','href','',function($n){
+		// 			return 'http://www.zhangyu.tv'.$n;
+		// 		}],
+		// 		'i'=>['.ch-pic img','data-zimg'],
+		// 		'p'=>['.channel-name','text'],
+		// 		'n'=>['.channel-online','text','',function($n){
+		// 			return w2n($n);
+		// 		}],
+		// 		'nw'=>['.channel-online','text','',function($n){
+		// 			return n2w($n);
+		// 		}],
+		// 		'a'=>['.figurl','data-zimg']
+		// 	]
+		// ),
+		// 'chushou'=>array(
+		// 	'd'=>'https://www.chushou.tv',
+		// 	'z'=>'https://www.chushou.tv/nav-list.htm?targetKey=',
+		// 	'c'=>array(
+		// 		'blzy'=>'3-1545-3',
+		// 		'cf'=>'3-1147-3',
+		// 		'cq'=>'3-1040-3',
+		// 		'czymf'=>'3-1432-3',
+		// 		'doudizhu'=>'3-1022-3',
+		// 		'dnf'=>'3-1267-3',
+		// 		'dwrg'=>'3-1606-3',
+		// 		'ecy'=>'3-1353-3',
+		// 		'fifa'=>'3-1189-3,3-1613-3,3-1614-3',
+		// 		'hpjy'=>'3-1576-4',
+		// 		'hyrz'=>'3-1175-3,3-1166-3',
+		// 		'hyxd'=>'3-1541-3',
+		// 		'jdqs'=>'3-1515-3',
+		// 		'jielan'=>'3-1333-3',
+		// 		'jw3'=>'3-1617-3',
+		// 		'lol'=>'3-1435-3',
+		// 		'lrs'=>'3-1386-3,3-1466-3,3-1387-3',
+		// 		'lscs'=>'3-1003-3',
+		// 		'majiang'=>'3-1035-3',
+		// 		'mhls'=>'3-1603-4',
+		// 		'miniworld'=>'3-1269-3',
+		// 		'nba2k'=>'3-1190-3',
+		// 		'nk'=>'3-1439-3',
+		// 		'nsh'=>'3-1635-3',
+		// 		'ppkdc'=>'3-1098-4',
+		// 		'qmqz'=>'3-1009-3',
+		// 		'qqfc-sy'=>'3-1409-3',
+		// 		'qiuqiu'=>'3-1013-3',
+		// 		'qqxw'=>'3-1601-3',
+		// 		'swxf'=>'3-1436-3',
+		// 		'tksj'=>'3-1204-3',
+		// 		'ttkp'=>'3-1008-3,3-1186-3',
+		// 		'tymyd'=>'3-1651-3',
+		// 		'wd'=>'3-1173-3',
+		// 		'wdsj'=>'3-1014-3',
+		// 		'wzry'=>'3-1159-3',
+		// 		'yhzrkdb'=>'3-1355-3',
+		// 		'yqlfc'=>'3-1363-3',
+		// 		'yanzhi'=>'3-1609-3'
+		// 	),
+		// 	'g'=>'#liveContent a',
+		// 	'r'=>[
+		// 		't'=>['.videoName','text'],
+		// 		'h'=>['','href','',function($n){
+		// 			return 'http://www.chushou.tv'.$n;
+		// 		}],
+		// 		'i'=>['.liveImages','data-imgsrc'],
+		// 		'p'=>['.livePlayerName','text'],
+		// 		'n'=>['.liveCount','text','',function($n){
+		// 			return w2n($n);
+		// 		}],
+		// 		'nw'=>['.liveCount','text'],
+		// 		'a'=>['.live_user_avatar','data-imgsrc']
+		// 	]
+		// ),
 		'bilibili'=>array(
 			'd'=>'https://live.bilibili.com',
 			'z'=>'https://live.bilibili.com/p/eden/area-tags?',
