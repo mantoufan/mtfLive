@@ -222,6 +222,7 @@ $c=array(
 //				'zhengnengliang'=>'znl'
 //			),
 			'f'=>function($n){
+				print_r($n);
 				$a=array();
 				$r=@$n['data']['rl'];
 				if($r){
@@ -762,6 +763,7 @@ if($_q){
 								if($_r){
 									$_a=json_decode($_r,TRUE);
 									if($_a){
+										print_r($_a);
 										$data=array_merge($data,$v['f']($_a));
 									}
 								}
