@@ -1,7 +1,7 @@
 <?php
 class mtfHTTP{
 	public function curl($_arv=array()) {
-		$arv=array_merge(array('u'=>'','t'=>3,'p'=>'','f'=>''),$_arv);
+		$arv=array_merge(array('u'=>'','t'=>6,'p'=>'','f'=>'', 'h'=>array()),$_arv);
 		$ch=curl_init();
 		curl_setopt($ch, CURLOPT_URL, $arv['u']);
 		curl_setopt($ch, CURLOPT_HEADER, FALSE);
@@ -37,9 +37,10 @@ class mtfHTTP{
 
 		if($arv['p']){
 			curl_setopt($ch, CURLOPT_POST, 1);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $arv['p']);
+			// 建议post数据可以使用http_build_query()函数处理, 能实现更好的兼容性, 更小的请求数据包
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($arv['p']));
 		}
-		
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $arv['h']);
 		$_h=curl_exec($ch);
 		if(curl_errno($ch))
 		{
