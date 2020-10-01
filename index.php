@@ -724,7 +724,10 @@ if($_q){
 		$t=explode(',',$a[1]);	
 	}
 	
-	
+	if (!is_dir('cache')) {
+		mkdir('cache');
+	}
+
 	$h='cache/'.md5($_q).'.php';
 	
 	if(@$_POST['update']){
