@@ -10,7 +10,7 @@ PHP 7.0 +
 # 安装
 1. 下载源码：  
 ![Download ZIP](https://files.catbox.moe/xqy6zf.jpg)  
-或者：
+或：
 ```
 git clone https://github.com/mantoufan/mtfLive.git
 ```
